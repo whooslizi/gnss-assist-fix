@@ -14,7 +14,7 @@ Inside China this never shows up, because those servers work there.
 # What it changes
 | File | Change |
 |---|---|
-| `gps.conf` (vendor / odm / system) | `SUPL_HOST` → `supl.google.com:7275`, `NTP_SERVER` → `time.android.com`, Qualcomm `XTRA_SERVER_*` → `xtrapath[1-3].izatcloud.net` (keeps the ROM's XTRA file name) |
+| `gps.conf` (vendor/odm/system) | `SUPL_HOST` → `supl.google.com:7275`, `NTP_SERVER` → `time.android.com`, Qualcomm `XTRA_SERVER_*` → `xtrapath[1-3].izatcloud.net` (keeps the ROM's XTRA file name) |
 | `agps_profiles_conf2.xml` (MediaTek) | Qianxun SUPL hosts → `supl.google.com` |
 | `gps_debug.conf` (system) | Framework-level SUPL override, works on any chipset |
 | `ntp_server` global setting | `time.android.com` |
@@ -24,7 +24,7 @@ On every boot, once the network is up, it re-injects time and XTRA/PSDS data.
 Original files are never modified. Everything is overlaid through the module and goes away when you remove it.
 
 # Install
-1. Flash `gnss_assist_fix-vX.X.zip` in KernelSU / APatch
+1. Flash `gnss_assist_fix-vX.X.zip`
 2. Reboot
 3. Go outside with a clear sky for 1–2 minutes to get a fresh fix
 
